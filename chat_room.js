@@ -2,14 +2,15 @@
 //ADD YOUR FIREBASE LINKS HERE
 
 var firebaseConfig = {
-  apiKey: "AIzaSyD9fmN0uBGhtwzV7YPSgE8XuR4G54LYweo",
-  authDomain: "let-s-chat-web-app-69369.firebaseapp.com",
-  projectId: "let-s-chat-web-app-69369",
-  storageBucket: "let-s-chat-web-app-69369.appspot.com",
-  messagingSenderId: "148849311948",
-  appId: "1:148849311948:web:98f777b9de74247c334269",
-  measurementId: "G-RLKZMLT43N"
+  apiKey: "AIzaSyDSk2SWtCLK8Xl5-inLaNk-3CICnxK11eU",
+  authDomain: "let-s-chat-86d38.firebaseapp.com",
+  projectId: "let-s-chat-86d38",
+  storageBucket: "let-s-chat-86d38.appspot.com",
+  messagingSenderId: "818229513245",
+  appId: "1:818229513245:web:bb07d19de3cd70c6020af4",
+  measurementId: "G-3RDMWMDKTF"
 };
+
 
 
 // Initialize Firebase
@@ -29,4 +30,11 @@ function addRoom()
     
     window.location = "chat_page.html";
 }
+
+function redirectToRoomName(name)
+  {
+    console.log(name);
+    localStorage.setItem("room_name", name);
+      window.location = "chat_page.html";
+  }
 

@@ -1,12 +1,13 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyD9fmN0uBGhtwzV7YPSgE8XuR4G54LYweo",
-    authDomain: "let-s-chat-web-app-69369.firebaseapp.com",
-    projectId: "let-s-chat-web-app-69369",
-    storageBucket: "let-s-chat-web-app-69369.appspot.com",
-    messagingSenderId: "148849311948",
-    appId: "1:148849311948:web:98f777b9de74247c334269",
-    measurementId: "G-RLKZMLT43N"
-  };
+  apiKey: "AIzaSyDSk2SWtCLK8Xl5-inLaNk-3CICnxK11eU",
+  authDomain: "let-s-chat-86d38.firebaseapp.com",
+  projectId: "let-s-chat-86d38",
+  storageBucket: "let-s-chat-86d38.appspot.com",
+  messagingSenderId: "818229513245",
+  appId: "1:818229513245:web:bb07d19de3cd70c6020af4",
+  measurementId: "G-3RDMWMDKTF"
+};
+
   
 
 // Initialize Firebase
@@ -15,14 +16,13 @@ firebase.initializeApp(firebaseConfig);
 user_name = localStorage.getItem("user_name");
 room_name = localStorage.getItem("room_name");
 
-user_name = localStorage.getItem("user_name");
 
 document.getElementById("user_name").innerHTML = "Welcome " + user_name + "!";
 
 function send()
 {
-    msg = documen.getElementById("msg").value;
-    firebaseConfig.database().ref(room_name).push({
+    msg = document.getElementById("msg").value;
+    firebase.database().ref(room_name).push({
         name:user_name,
         message:msg,
         like:0
@@ -49,12 +49,7 @@ function getData() { firebase.database().ref("/"+room_name).on('value', function
   
   getData();
   
-  function redirectToRoomName(name)
-  {
-    console.log(name);
-    localStorage.setItem("room_name", name);
-      window.location = "chat_page.html";
-  }
+  
   
   function logout() {
   localStorage.removeItem("user_name");
